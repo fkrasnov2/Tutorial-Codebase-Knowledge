@@ -38,6 +38,7 @@ jobs:
     - name: Test with pytest
       env:
         GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        GEMINI_API_KEY: ${{ vars.GEMINI_API_KEY }}
       run: |
         #pytest
         python main.py --repo https://github.com/fkrasnov2/de4rec --include "*.py" --exclude "tests/*" --max-size 50000
