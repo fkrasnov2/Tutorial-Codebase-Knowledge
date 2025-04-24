@@ -37,7 +37,7 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       env:
-        GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        # GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         GEMINI_API_KEY: ${{ vars.GEMINI_API_KEY }}
       run: |
         #pytest
